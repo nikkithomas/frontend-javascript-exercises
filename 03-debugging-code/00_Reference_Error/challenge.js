@@ -1,5 +1,3 @@
-var hello = function(msg) {
-   return "Hello " + msg;
- };
-hello(world);
-hello(Bob);
+// module.exports.hello = function(msg) {
+//   return "Hello " + msg;
+// };

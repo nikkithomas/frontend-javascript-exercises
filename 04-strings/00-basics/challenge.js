@@ -1,29 +1,34 @@
 module.exports.formLetter = function(firstName, senderName, message) {
-
+return "Hello "+firstName+",\n\n" +message+"\n\nSincerely,\n"+senderName;
 };
-formLetter("Kevin","Cole","Everything is wonderful!");
+
 
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
 
-};
+ var a = bigString.substring(startA, endA);
+        var b=bigString.substring(startB, endB);
+        return a+b;
+      };
 
-sliceItAndCombineIt("Thank goodness it is Saturday",0,6,7,16);
-sliceItAndCombineIt("Thank goodness it is Saturday",1,16,2,5);
 
 module.exports.findFirstMatch = function(text, searchString) {
-
+  var a=text;
+  var b=searchString;
+  return text.indexOf(searchString);
 };
 
-findFirstMatch("Today is Saturday","day");
+
 
 module.exports.findLastMatch = function(text, searchString) {
+  var a =text;
+  var b=searchString;
+  return text.lastIndexOf(searchString);
 
 };
-
-findLastMatch("Today is Saturday","day");
 
 module.exports.substringBetweenMatches = function(text, searchString) {
-
+var start =text.indexOf(searchString) + searchString.length;
+var end = text.lastIndexOf(searchString);
+return text.substring(start,end);
 };
 
-substringBetweenMatches("Today is Saturday, and tomorrow is Sunday","day");

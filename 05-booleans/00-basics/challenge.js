@@ -1,37 +1,48 @@
 module.exports.equalStrings = function(stringOne, stringTwo) {
-
+  if (stringOne==stringTwo){
+    return true;
+  }
+  else{
+    return false;
+  }
 };
 
-equalStrings('Florida','Florida')
-equalStrings('Florida','Maryland')
+
 
 module.exports.notEqual = function(one, two) {
+  if (one===two){
+    return false;
+  }
+  else{
+    return true;
+  }
 
 };
 
-notEqual(2,'2')
-notEqual(2,2)
+
 
 module.exports.inBetween = function(lower, middle, upper) {
 
+return ((middle>lower)&&(middle<upper))
+ 
 };
 
-inBetween(2,7,9)
-inBetween(2,9,7)
+
 
 
 
 module.exports.outsideRanges = function(number) {
+ return (!(number>=10 && number <=20)&&
+  !(number>42&&number<=75)&&
+  !(number>1&&number<6));
 
 };
 
-outsideRanges(35)
-outsideRanges(79)
+
 
 module.exports.nameAndPrice = function(name, price) {
+return ((name==="NYTimes"||name==="LATimes")&&(price>=1));
+  
 
 };
 
-nameAndPrice('LATimes',2)
-nameAndPrice('NYTimes',0)
-nameAndPrice('LATimes'0)
